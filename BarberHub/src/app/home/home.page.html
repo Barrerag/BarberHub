@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <center><ion-title>¡Bienvenido a BarberHub!</ion-title></center>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <center><h1>Ingresar</h1></center>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/login']" expand="block" shape="round" color="primary"> ¡Iniciar sesión!</ion-button>
+        <br>
+        <center><span class=""> ¿Aún no eres usuario?</span></center>
+        <ion-button [routerLink]="['/register']" expand="block" shape="round" color="secondary"> ¡Registrate ahora!</ion-button>
+        <br>
+        <center><span>¿No quieres registrarte?</span></center>
+        <ion-button [routerLink]="['/']" expand="block" shape="round" color="light"> ¡Ingresar como invitado!</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
