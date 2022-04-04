@@ -8,10 +8,6 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -22,6 +18,14 @@ const routes: Routes = [
   {
     path: 'forgot-pass',
     loadChildren: () => import('./forgot-pass/forgot-pass.module').then( m => m.ForgotPassPageModule)
+  },
+  {
+    path: 'trabaja-con-nosotros',
+    loadChildren: () => import('./trabaja-con-nosotros/trabaja-con-nosotros.module').then( m => m.TrabajaConNosotrosPageModule)
+  },
+  {
+    path: 'sel-bs',
+    loadChildren: () => import('./sel-bs/sel-bs.module').then( m => m.SelBsPageModule)
   }
 ];
 @NgModule({
