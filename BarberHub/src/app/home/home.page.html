@@ -6,21 +6,23 @@
 
 <ion-content class="auth-form">
   <center><h1>Ingresar</h1></center>
+  <span class="divider line one-line"></span>
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
         <ion-button [routerLink]="['/login']" expand="block" shape="round" color="primary"> Iniciar sesión</ion-button>
-        <br>
-        <center><span class=""> ¿Aún no eres usuario?</span></center>
+        
+        <span class="divider line one-line"> ¿Aún no eres usuario?</span>
+        
         <ion-button [routerLink]="['/register']" expand="block" shape="round" color="secondary"> Registrate ahora</ion-button>
-        <br>
-        <center><span>¿No quieres registrarte?</span></center>
-        <br>
-        <ion-button [routerLink]="['/sel-bs']" expand="block" shape="round" color="light"> Ingresa como invitado</ion-button>
+        
+        <span class="divider line one-line"> ¿No quieres registrarte?</span>
+        
+        <ion-button [routerLink]="['/sel-bs']" expand="block" shape="round" color="tertiary"> Ingresa como invitado</ion-button>
+        <span class="divider line one-line"> ¿Tienes una barbería?</span>
+        <ion-button [routerLink]="['/trabaja-con-nosotros']" expand="block" shape="round" color="success">¡Trabaja con nosotros!</ion-button>
+        
       </ion-col>
     </ion-row>
   </ion-grid>
-  <center>¿Tienes una barbería?</center>
-  <br>
-  <center><a [routerLink]="['/trabaja-con-nosotros']">¡Trabaja con nosotros!</a></center>
 </ion-content>
