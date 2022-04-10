@@ -7,7 +7,26 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <ion-card *ngFor = "let i of barberia | async">
+            <ion-item class="scrolling-wrapper">
+              <strong>
+                <ion-label fill="center"> {{i.nombre}}</ion-label>
+              </strong>
+            </ion-item>
+            <ion-card-content>
+              Calificación: {{i.calificacion}} <br>
+              Email: {{i.email}} <br>
+              Dirección : {{i.direccion}} <br>
+              Teléfono contacto: {{i.telefono_contacto}} <br>
+            </ion-card-content>
+        </ion-card>
+      </ion-label>
+    </ion-item>
+  </ion-list>
   
 
 </ion-content>
