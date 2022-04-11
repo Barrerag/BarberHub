@@ -23,5 +23,13 @@
         <center><a [routerLink]="['/forgot-pass']" class="small-text">¿Olvidaste tu contraseña?</a></center>
       </ion-col>
     </ion-row>
+    <span class="divider line one-line">También puedes...</span>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="success" (click)="authService.GoogleAuth()" expand="block" shape="round">
+          Ingresar con Google
+        </ion-button>
+      </ion-col>
+    </ion-row>
   </form>
 </ion-content>
