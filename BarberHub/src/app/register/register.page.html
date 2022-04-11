@@ -18,7 +18,7 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" #email required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Teléfono</ion-label>
@@ -26,7 +26,7 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" #password required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Confirmar contraseña</ion-label>
@@ -34,7 +34,7 @@
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="tertiary" expand="block">¡Registrarse!</ion-button>
+        <ion-button type="submit" (click)="onRegister(email,password)" color="tertiary" expand="block">¡Registrarse!</ion-button>
       </ion-col>
     </ion-row>
   </form>
