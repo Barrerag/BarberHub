@@ -10,15 +10,15 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" #email required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" #password required></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="tertiary" expand="block" shape="round">Ingresar</ion-button>
+        <ion-button type="submit" (click)="onLogin(email, password)"color="tertiary" expand="block" shape="round">Ingresar</ion-button>
         <br>
         <center><a [routerLink]="['/forgot-pass']" class="small-text">¿Olvidaste tu contraseña?</a></center>
       </ion-col>
@@ -26,7 +26,7 @@
     <span class="divider line one-line">También puedes...</span>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="success" (click)="authService.GoogleAuth()" expand="block" shape="round">
+        <ion-button type="submit" color="success" (click)="onLoginGoogle(email, password)" expand="block" shape="round">
           Ingresar con Google
         </ion-button>
       </ion-col>
