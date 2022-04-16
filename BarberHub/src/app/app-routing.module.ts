@@ -26,6 +26,14 @@ const routes: Routes = [
   {
     path: 'sel-bs',
     loadChildren: () => import('./sel-bs/sel-bs.module').then( m => m.SelBsPageModule)
+  },
+  {
+    path: 'verificar-email',
+    loadChildren: () => import('./verificar-email/verificar-email.module').then( m => m.VerificarEmailPageModule)
+  },
+  {
+    path: 'login-barberia',
+    loadChildren: () => import('./login-barberia/login-barberia.module').then( m => m.LoginBarberiaPageModule)
   }
 ];
 @NgModule({

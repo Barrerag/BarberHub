@@ -6,6 +6,7 @@ import * as firebase from 'firebase/compat/app'
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore'; 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { ForgotPassPageModule } from '../forgot-pass/forgot-pass.module';
 
 @Injectable({
   providedIn: 'root'
@@ -74,6 +75,10 @@ export class AuthService {
     }
   }
 
+  emailVerificado(user: User): boolean{
+    return user.emailVerified === true ? true : false; 
+  }
+
   private updateUserData(user:User){
     const userRef:AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
     const data:User ={
@@ -96,6 +101,8 @@ export class AuthService {
       })
     )
   }
+
+ 
 }
 
 
