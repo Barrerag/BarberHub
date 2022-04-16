@@ -6,7 +6,7 @@
 
 <ion-content class="auth-form">
   <center><h1>Ingresar</h1></center>
-  <span class="divider line one-line"></span>
+  <hr class="solid">
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
@@ -19,9 +19,14 @@
         <span class="divider line one-line"> ¿No quieres registrarte?</span>
         
         <ion-button [routerLink]="['/sel-bs']" expand="block" shape="round" color="tertiary"> Ingresa como invitado</ion-button>
+        <span class="divider line one-line">Nota:</span>
+        <span>Si utilizas la sesión de invitado podrás visualizar los horarios, pero deberás registrarte para poder realizar
+          la reserva de hora. </span>
         <span class="divider line one-line"> ¿Tienes una barbería?</span>
         <ion-button [routerLink]="['/trabaja-con-nosotros']" expand="block" shape="round" color="success">¡Trabaja con nosotros!</ion-button>
-        
+        <br>
+        <hr class="solid"><br>
+        <ion-button [routerLink] = "['/login-barberia']" expand="block" shape="round" color="danger"> Ingreso barberías</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

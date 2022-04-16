@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class RegisterPage implements OnInit {
 
-  constructor(private authSvc: AuthService) { }
+  constructor(private authSvc: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -24,5 +25,13 @@ export class RegisterPage implements OnInit {
       console.log('Error ->', error);
     }
   }
+
+  private redirectUser(isVerified: boolean): void{
+    if(isVerified){
+      this.router.navigate(['sel-bs']);
+    }else{
+     this.router.navigate(['verificar-email']);
+    }
+ }
 
 }

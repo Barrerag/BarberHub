@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private authSvc: AuthService) { }
+  constructor(private authSvc: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -17,9 +18,8 @@ export class LoginPage implements OnInit {
     try{
       const user = await this.authSvc.login(email.value, password.value);
       if(user){
-        //verificar correo
-        console.log('email ->', email);
-        console.log('password ->', password)
+        const verificar = this.authSvc.emailVerificado(user);
+        this.redirectUser(verificar);
       }
     }
     catch(error){
@@ -31,12 +31,21 @@ export class LoginPage implements OnInit {
     try{
       const user = await this.authSvc.loginGoogle();
       if(user){
-        console.log('User ->', user);
+        const verificar = this.authSvc.emailVerificado(user);
+        this.redirectUser(verificar);
         
       }
     }
     catch(error){
       console.log('Error ->', error);
     }
+  }
+
+  private redirectUser(isVerified: boolean): void{
+     if(isVerified){
+       this.router.navigate(['sel-bs']);
+     }else{
+      this.router.navigate(['verificar-email']);
+     }
   }
 }
