@@ -34,6 +34,26 @@ const routes: Routes = [
   {
     path: 'login-barberia',
     loadChildren: () => import('./login-barberia/login-barberia.module').then( m => m.LoginBarberiaPageModule)
+  },
+  {
+    path: 'selected-b',
+    loadChildren: () => import('./selected-b/selected-b.module').then( m => m.SelectedBPageModule)
+  },
+  {
+    path: 'galeria',
+    loadChildren: () => import('./galeria/galeria.module').then( m => m.GaleriaPageModule)
+  },
+  {
+    path: 'location',
+    loadChildren: () => import('./location/location.module').then( m => m.LocationPageModule)
+  },
+  {
+    path: 'contacto',
+    loadChildren: () => import('./contacto/contacto.module').then( m => m.ContactoPageModule)
+  },
+  {
+    path: 'horario',
+    loadChildren: () => import('./horario/horario.module').then( m => m.HorarioPageModule)
   }
 ];
 @NgModule({

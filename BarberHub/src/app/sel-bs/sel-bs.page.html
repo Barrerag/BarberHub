@@ -11,7 +11,7 @@
   <ion-list>
     <ion-item>
       <ion-label>
-        <ion-card button *ngFor = "let i of barberia | async">
+        <ion-card button [routerLink]="['/selected-b']" *ngFor = "let i of barberia | async">
             <ion-item class="scrolling-wrapper">
               <strong>
                 <ion-label fill="center"> {{i.nombre}}</ion-label>
