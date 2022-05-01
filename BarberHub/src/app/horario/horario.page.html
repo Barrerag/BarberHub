@@ -8,6 +8,22 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+          Seleccionar barbero: 
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Barbero: </ion-label>
+      <ion-select [(ngModel)]="barbero" >
+        <ion-select-option value="1"> hola</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  
+
   <!-- INICIO NAVBAR FOOTER-->
   <ion-tabs>
     <ion-tab-bar slot="bottom">
