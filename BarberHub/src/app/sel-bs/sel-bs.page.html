@@ -8,21 +8,28 @@
 </ion-header>
 <ion-content>
   
+  <ion-searchbar placeholder="Buscar por nombre, ubicación, etc." [(ngModel)]="searchTerm" showCancelButton="focus" animated>
+
+  </ion-searchbar>
+
+
   <ion-list>
     <ion-item>
       <ion-label>
-        <ion-card button [routerLink]="['/selected-b']" *ngFor = "let i of barberia | async">
+        <ion-card button  *ngFor = "let i of barberia | async | filter:searchTerm">
+           <div (click)=" getDatosBarberia(i.barbershop_id)" >
             <ion-item class="scrolling-wrapper">
               <strong>
                 <ion-label fill="center"> {{i.nombre}}</ion-label>
               </strong>
             </ion-item>
-            <ion-card-content>
+            <ion-card-content >
               Calificación: {{i.calificacion}} <br>
               Email: {{i.email}} <br>
               Dirección : {{i.direccion}} <br>
               Teléfono contacto: {{i.telefono_contacto}} <br>
             </ion-card-content>
+           </div>
         </ion-card>
       </ion-label>
     </ion-item>

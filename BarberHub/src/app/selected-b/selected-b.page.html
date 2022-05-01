@@ -1,15 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>'nombre barberia'</ion-title>
-  </ion-toolbar>
+  <div *ngFor = "let i of barberia | async ">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{i.nombre}}</ion-title>
+    </ion-toolbar>
+  </div>
 </ion-header>
 <ion-content>
+
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule" [routerLink]="['/horario']">
+      <ion-tab-button [routerLink]="['/horario']">
         <ion-icon name="calendar-outline"></ion-icon>
         <ion-label>Horarios</ion-label>
       </ion-tab-button>

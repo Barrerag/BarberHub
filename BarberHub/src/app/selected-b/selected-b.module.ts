@@ -8,6 +8,8 @@ import { SelectedBPageRoutingModule } from './selected-b-routing.module';
 
 import { SelectedBPage } from './selected-b.page';
 
+
+
 @NgModule({
   imports: [
     CommonModule,

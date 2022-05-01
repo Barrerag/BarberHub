@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login-barberia</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ingreso barberías</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="onLogin(email, password)" color="tertiary" expand="block" shape="round">Ingresar</ion-button>
+        <br>
+        <center><a [routerLink]="['/forgot-pass']" class="small-text">¿Olvidaste tu contraseña?</a></center>
+      </ion-col>
+    </ion-row>
+    
+  </form>
 </ion-content>

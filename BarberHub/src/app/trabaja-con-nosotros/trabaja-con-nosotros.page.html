@@ -9,4 +9,84 @@
 
 <ion-content>
 
+  <form>
+    <!-- INICIO DATOS BASICOS DE LA BARBERÍA-->
+      <span class="divider line one-line"> Datos básicos</span>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Nombre barberia</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Teléfono de contacto</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" required></ion-input>
+      </ion-item>
+
+    <!-- FIN DATOS BASICOS DE LA BARBERIA-->
+
+    <!-- INICIO DATOS DE UBICACION --> 
+      <span class="divider line one-line"> Datos de Ubicación</span>
+
+      <!-- HACER QUE SEA UN DROPLIST CON PAISES-->
+      <ion-item lines="full">
+        <ion-label position="floating">País</ion-label>
+        <ion-input type="text" #email required></ion-input>
+      </ion-item>
+      
+      <!-- HACER QUE SEA UN DROPLIST CON Ciudades-->
+      <ion-item lines="full">
+        <ion-label position="floating">Ciudad</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Dirección</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+    <!-- FIN DATOS DE UBICACIÓN-->
+
+    <!-- INICIO DATOS BANCARIOS -->
+      <span class="divider line one-line"> Datos bancarios para pago</span>
+      <!--  -->
+      <ion-item lines="full">
+        <ion-label position="floating">Nombre banco</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+      
+      <!-- DROPLIST CON TIPOS DE CUENTA -->
+      <ion-item lines="full">
+        <ion-label position="floating">Tipo de cuenta</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Número de cuenta</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Teléfono de cuenta</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+    <!-- FIN DATOS BANCARIOS -->
+    <hr class="solid"> 
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit"  color="tertiary" expand="block">Enviar solicitud</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
 </ion-content>

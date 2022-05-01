@@ -11,6 +11,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     IonicModule,
     SelBsPageRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    Ng2SearchPipeModule
   ],
   declarations: [SelBsPage]
 })

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { BarbershopsService } from '../services/barbershops.service';
 
 @Component({
   selector: 'app-horario',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./horario.page.scss'],
 })
 export class HorarioPage implements OnInit {
-
-  constructor() { }
+  barberia: Observable<any[]>;
+  
+  constructor(private barbershopService: BarbershopsService) { }
 
   ngOnInit() {
   }
 
+  getData(){
+    this.barberia = this.barbershopService.getBarberiaById();
+ }
 }
