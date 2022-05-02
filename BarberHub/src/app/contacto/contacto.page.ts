@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { BarbershopsService } from '../services/barbershops.service';
 
 @Component({
   selector: 'app-contacto',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacto.page.scss'],
 })
 export class ContactoPage implements OnInit {
-
-  constructor() { }
+  barberia: Observable<any[]>;
+  
+  constructor(private barbershopService: BarbershopsService) {
+    this.getData();
+   }
 
   ngOnInit() {
   }
 
+  getData(){
+    this.barberia = this.barbershopService.getBarberiaById();
+ }
 }

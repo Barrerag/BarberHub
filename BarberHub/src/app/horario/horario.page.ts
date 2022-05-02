@@ -10,7 +10,9 @@ import { BarbershopsService } from '../services/barbershops.service';
 export class HorarioPage implements OnInit {
   barberia: Observable<any[]>;
   
-  constructor(private barbershopService: BarbershopsService) { }
+  constructor(private barbershopService: BarbershopsService) {
+    this.getData();
+   }
 
   ngOnInit() {
   }
