@@ -12,7 +12,7 @@ export class BarbershopsService {
   afs: AngularFirestore;
   id_barberia: string;
   constructor(private afsr: AngularFirestore) { 
-    this.barbershopsCollection = afsr.collection('barberias');
+    this.barbershopsCollection = afsr.collection<Barberia>('barberias');
     this.afs = afsr;
   }
   

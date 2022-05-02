@@ -16,7 +16,7 @@ export class SelectedBPage implements OnInit {
     console.log("barberia by id: ", this.barbershopService.getBarberiaById());
 
    }
-
+   
   ngOnInit() {
   }
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Leaflet from 'leaflet';
+import { Observable } from 'rxjs';
+import { BarbershopsService } from '../services/barbershops.service';
 
  
 @Component({
@@ -9,18 +11,27 @@ import * as Leaflet from 'leaflet';
 })
 export class LocationPage implements OnInit {
   map: Leaflet.map;
-  constructor() { }
-
+  barberia: Observable<any[]>;
+  lat: number;
+  lon: number
+  constructor(private barbershopService: BarbershopsService) {
+    this.getData();
+   }
+    
   ngOnInit() {
   }
-  ionViewDidEnter(){ this.leafletMap();}
+  ionViewDidEnter(){ this.leafletMap(this.lat,this.lon);}
 
-  leafletMap() {
-    this.map = Leaflet.map('mapId').setView([-36.592010, -72.121354], 16);
+  leafletMap(lat: number, lon: number) {
+    this.map = Leaflet.map('mapId').setView([lat, lon], 16);
     Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
 
-    Leaflet.marker([-36.592010, -72.121354]).addTo(this.map).bindPopup();
+    Leaflet.marker([lat, lon]).addTo(this.map).bindPopup();
 
   }
+  getData(){
+    this.barberia = this.barbershopService.getBarberiaById();
+ }
+
 
 }

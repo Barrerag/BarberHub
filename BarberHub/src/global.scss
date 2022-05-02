@@ -10,6 +10,24 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
+ion-button,h1,ion-label,ion-card-content,ion-note,hr,span,ion-tabs{
+    font-family: Rockwell;
+}
+ion-toolbar, ion-tab-bar{
+    --background: #43C6AC;
+  
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4cb9c4', endColorstr='#3dd3ae', GradientType=1 );
+    font-family: Rockwell;
+    --color:#ffffff;
+}
+ion-grid,ion-content{
+   // --background: #43C6AC;  /* fallback for old browsers */
+    //--background: -webkit-linear-gradient(to right, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    //--background: linear-gradient(to right, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --background: rgb(238,174,202);
+    --background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+}
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */

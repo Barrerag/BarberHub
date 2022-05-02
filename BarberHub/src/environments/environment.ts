@@ -8,7 +8,7 @@ export const environment = {
     apiKey: "AIzaSyDZyrSItsLAEu8CGUpM-3fAdQuh1GWP48o",
     authDomain: "barberhub-8f18e.firebaseapp.com",
     projectId: "barberhub-8f18e",
-    storageBucket: "barberhub-8f18e.appspot.com",
+    storageBucket: "gs://barberhub-8f18e.appspot.com/",
     messagingSenderId: "872792399025",
     appId: "1:872792399025:web:adc250d6e7b21e49f2d690"
   }

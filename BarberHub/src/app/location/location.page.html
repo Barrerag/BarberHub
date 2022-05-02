@@ -1,31 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Ubicación 'name'</ion-title>
-  </ion-toolbar>
+  <div *ngFor = "let i of barberia | async ">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Ubicación {{i.nombre}}</ion-title>
+    </ion-toolbar>
+  </div>
 </ion-header>
 <ion-content>
 
+  <div id="mapId" style="width: 100%; height: 50%" *ngFor = "let i of barberia | async ">
+    <div >
+        {{leafletMap(i.lat,i.lon)}}
+    </div>
+  </div>
  
-  <div id="mapId" style="width: 100%; height: 50%"></div>
   <!-- INICIO NAVBAR FOOTER-->
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule" [routerLink]="['/horario']">
+      <ion-tab-button  [routerLink]="['/horario']">
         <ion-icon name="calendar-outline"></ion-icon>
         <ion-label>Horarios</ion-label>
       </ion-tab-button>
-      <ion-tab-button tab="ubication" [routerLink]="['/location']">
+      <ion-tab-button [routerLink]="['/location']">
         <ion-icon name="location-outline"></ion-icon>
         <ion-label>Ubicación</ion-label>
       </ion-tab-button>
-      <ion-tab-button tab="gallery" [routerLink]="['/galeria']">
+      <ion-tab-button [routerLink]="['/galeria']">
         <ion-icon name="images-outline"></ion-icon>
         <ion-label>Galería</ion-label>
       </ion-tab-button>
-      <ion-tab-button tab="contact" [routerLink]="['/contacto']">
+      <ion-tab-button  [routerLink]="['/contacto']">
         <ion-icon name="information-circle"></ion-icon>
         <ion-label>Contacto</ion-label>
       </ion-tab-button>
