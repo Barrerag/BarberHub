@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { BarbershopsService } from '../services/barbershops.service';
 
@@ -10,7 +11,7 @@ import { BarbershopsService } from '../services/barbershops.service';
 export class SelectedBPage implements OnInit {
   barberia: Observable<any[]>;
 
-  constructor(private barbershopService: BarbershopsService) {
+  constructor(private barbershopService: BarbershopsService, private router: Router) {
     this.getData();
     console.log("selected-bs",this.barbershopService.id_barberia);
     console.log("barberia by id: ", this.barbershopService.getBarberiaById());
@@ -22,5 +23,9 @@ export class SelectedBPage implements OnInit {
 
   getData(){
      this.barberia = this.barbershopService.getBarberiaById();
+  }
+  
+  redirect(ruta: string){
+    this.router.navigate([ruta]);
   }
 }

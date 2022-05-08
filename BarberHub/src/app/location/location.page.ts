@@ -22,6 +22,7 @@ export class LocationPage implements OnInit {
   }
   ionViewDidEnter(){ this.leafletMap(this.lat,this.lon);}
 
+  
   leafletMap(lat: number, lon: number) {
     this.map = Leaflet.map('mapId').setView([lat, lon], 16);
     Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
