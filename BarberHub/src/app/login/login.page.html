@@ -18,7 +18,7 @@
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" (click)="onLogin(email, password)"color="tertiary" expand="block" shape="round">Ingresar</ion-button>
+        <ion-button type="submit" (click)="onLogin(email, password)"color="primary" expand="block" shape="round">Ingresar</ion-button>
         <br>
         <center><a [routerLink]="['/forgot-pass']" class="small-text">¿Olvidaste tu contraseña?</a></center>
       </ion-col>
@@ -26,7 +26,7 @@
     <span class="divider line one-line">También puedes...</span>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="success" (click)="onLoginGoogle(email, password)" expand="block" shape="round">
+        <ion-button type="submit" color="tertiary" (click)="onLoginGoogle(email, password)" expand="block" shape="round">
           Ingresar con Google
         </ion-button>
       </ion-col>

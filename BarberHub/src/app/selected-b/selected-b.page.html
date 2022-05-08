@@ -8,9 +8,60 @@
     </ion-toolbar>
   </div>
 </ion-header>
-<ion-content>
+<ion-content >
 
-  <ion-tabs>
+  <ion-card button class="ion-card">
+    <div (click)="redirect('/horario')">
+      <img src="https://firebasestorage.googleapis.com/v0/b/barberhub-8f18e.appspot.com/o/schedule.png?alt=media&token=358f7b8c-91ab-443f-915f-258ed1e94413"/>
+ 
+      <ion-card-title class="card-title">
+        Horarios
+      </ion-card-title> <br>
+      <ion-card-subtitle class="card-subtitle">
+        Presionando aquí podrás encontrar los horarios de los barberos!
+      </ion-card-subtitle>
+    </div>
+
+  </ion-card>
+
+
+  <ion-card button class="ion-card">
+    <img src="  https://firebasestorage.googleapis.com/v0/b/barberhub-8f18e.appspot.com/o/World_location_map.svg.png?alt=media&token=038f0a87-85df-48a6-af36-fe90a8b71a9b
+    "/>
+    <ion-card-title class="card-title">
+      Ubicación
+    </ion-card-title> <br>
+    <ion-card-subtitle class="card-subtitle">
+      Presionando aquí podrás encontrar un mapa con la ubicación de la barbería!
+    </ion-card-subtitle>
+  </ion-card>
+  <ion-card button class="ion-card">
+    <img src="https://firebasestorage.googleapis.com/v0/b/barberhub-8f18e.appspot.com/o/wordpress-photo-gallery-plugins1.png?alt=media&token=5db0fb87-3207-47ec-bfa4-4478b0161f95"/>
+    <ion-card-title class="card-title">
+      Galería
+    </ion-card-title> <br>
+    <ion-card-subtitle class="card-subtitle">
+      Presionando aquí podrás encontrar una galeria con los trabajos realizados!
+    </ion-card-subtitle>
+  </ion-card>
+
+  <div (click)="redirect('/contacto')">
+  <ion-card button="true" class="ion-card">
+    
+      <img src="https://firebasestorage.googleapis.com/v0/b/barberhub-8f18e.appspot.com/o/imagen_2022-05-07_222621162.png?alt=media&token=9d4021dd-48a0-431c-807b-aae58b41512d"/>
+      <ion-card-title class="card-title">
+        Contacto
+      </ion-card-title> <br>
+      <ion-card-subtitle class="card-subtitle">
+        Presionando aquí podrás encontrar información de contacto de la barbería!
+      </ion-card-subtitle>
+      
+    
+  </ion-card>
+</div>
+  
+
+  <ion-tabs >
     <ion-tab-bar slot="bottom">
       <ion-tab-button [routerLink]="['/horario']">
         <ion-icon name="calendar-outline"></ion-icon>
